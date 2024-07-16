@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfAlbom.MainWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Album" Background="#000" Height="550" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="AlbumListBox" SelectionChanged="AlbumListBox_SelectionChanged" DisplayMemberPath="Title" HorizontalAlignment="Center" Width="400" Background="#111" Foreground="#FFF"/>
+        <ListBox x:Name="PhotoListBox" Grid.Column="1" DisplayMemberPath="Title" Background="#111" Foreground="#FFF"/>
+        <!--<ListBox x:Name="AlbumListBox" ItemsSource="{Binding Albums}" SelectedItem="{Binding SelectedAlbum}" DisplayMemberPath="Title" HorizontalAlignment="Center" Width="400" />
+        <ListBox x:Name="PhotoListBox" Grid.Column="1" ItemsSource="{Binding Photos}" DisplayMemberPath="Title" />-->
+    </Grid>
+</Window>
